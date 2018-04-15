@@ -1,0 +1,81 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+#instructions {
+  width: 90vw;
+  height: 75px;
+  background: white;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#start {
+  width: 100px;
+  height: 50px;
+  background: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#start:hover ~ #board-one {
+  display: flex;
+}
+
+#board-one {
+  width: 500px;
+  flex-direction: column;
+  position: relative;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#board-one:hover {
+  display: flex;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  /* border: solid black 1px; */
+}
+
+.path {
+  background: green;
+}
+
+.pit {
+  background: black;
+}
+
+.pit:hover ~ #lost-screen{
+  display: flex;
+}
+
+#lost-screen {
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .8;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+#lost-screen:hover {
+  display: flex;
+}
