@@ -1,0 +1,228 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 5px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 5px;
+}
+
+#start {
+  width: 100px;
+  height: 50px;
+  background: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#start:hover ~ #board-one {
+  display: flex;
+}
+
+#board-one {
+  width: 500px;
+  flex-direction: column;
+  position: relative;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: solid black 1px;
+}
+
+#board-one:hover {
+  display: flex;
+}
+
+#row {
+  width: 100%;
+  display: flex;
+}
+
+.square {
+  width: 25px;
+  height: 40px;
+  display: inline-block;
+}
+
+.path, .path4, .path5 {
+  background: white;
+  flex: 1;
+}
+
+.path2, .path3, .path6, .path7 {
+  background: white;
+  flex: 4;
+}
+
+.pit {
+  background: blue;
+}
+
+.obstacle {
+  display:inline;
+  background: blue;
+}
+
+.obstacle1 {
+  animation-name: obstacle;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.obstacle2 {
+  animation-name: obstacle2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.obstacle3 {
+  animation-name: obstacle3;
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+}
+
+.obstacle4 {
+  animation-name: obstacle4;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+}
+
+.obstacle5 {
+  animation-name: obstacle5;
+  animation-duration: .8s;
+  animation-iteration-count: infinite;
+}
+
+.obstacle6 {
+  animation-name: obstacle6;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+}
+
+.obstacle7 {
+  animation-name: obstacle7;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+}
+
+.obstacle:hover #lost-screen {
+  display: flex;
+}
+
+#lost-screen:hover {
+  display: flex;
+}
+
+#win-screen {
+  display: none;
+}
+
+#win-screen:hover {
+  display: flex;
+}
+
+#win-block:hover #win-screen {
+  display: flex;
+}
+
+#win-screen {
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .8;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes obstacle {
+  0%, 100% {
+    flex: .1;
+  }
+  50% {
+    flex: .8;
+  }
+}
+
+@keyframes obstacle2 {
+  0%, 100% {
+    flex: 1;
+  }
+  50% {
+    flex: 5;
+  }
+}
+
+@keyframes obstacle3 {
+  0%, 100% {
+    flex: 1;
+  }
+  50% {
+    flex: 7;
+  }
+}
+
+@keyframes obstacle4 {
+  0%, 100% {
+    flex: .3;
+  }
+  50% {
+    flex: .7;
+  }
+}
+
+@keyframes obstacle5 {
+  0%, 100% {
+    flex: 1;
+  }
+  50% {
+    flex: 2;
+  }
+}
+
+@keyframes obstacle6 {
+  0%, 100% {
+    flex: 1;
+  }
+  50% {
+    flex: 7;
+  }
+}
+
+@keyframes obstacle7 {
+  0%, 100% {
+    flex: 1;
+  }
+  50% {
+    flex: 7;
+  }
+}
+
+#lost-screen {
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .8;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
